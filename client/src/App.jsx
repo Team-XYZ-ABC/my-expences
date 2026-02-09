@@ -12,6 +12,7 @@ import Breaker from './components/Extras/Breaker';
 import TitleDescription from '@components/texts/TitleDescription';
 import Link from '@components/links/Link'
 import Description from './components/texts/Description';
+import SignIn from './pages/auth/SignIn';
 
 
 
@@ -33,7 +34,8 @@ const App = () => {
 
   return (
     <div>
-      App
+      <div className='bg-red-200 w-full h-[65px]'></div>
+      <SignIn />
     </div>
   )
 }
