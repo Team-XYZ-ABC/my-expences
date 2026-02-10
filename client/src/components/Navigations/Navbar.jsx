@@ -4,7 +4,7 @@ import Button from "../buttons/Button";
 
 const Navbar = () => {
   return (
-    <div className="w-full h-20.25 bg-white flex items-center justify-between p-4 shadow-lg fixed ">
+    <div className="w-full h-20 bg-white flex items-center justify-between p-4 shadow-lg top-0 z-99 fixed ">
       <div className="flex items-center gap-10">
         <div className="flex items-center ">
           <MdOutlineAccountBalanceWallet className="w-10 h-10 text-black p-2 rounded-md " />
