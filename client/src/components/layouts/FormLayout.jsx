@@ -1,9 +1,9 @@
 import React from 'react'
 
-const FormLayout = (props) => {
+const FormLayout = ({children}) => {
     return (
-        <div className='min-w-120 border border-gray-300 p-5'>
-            {props.children}
+        <div className='max-w-150 w-[448px] min-w-75'>
+            {children}
         </div>
     )
 }
