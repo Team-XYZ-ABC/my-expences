@@ -1,8 +1,11 @@
 import React from "react";
 import { MdOutlineAccountBalanceWallet } from "react-icons/md";
 import Button from "../buttons/Button";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate()
+
   return (
     <div className="w-full h-20 bg-white flex items-center justify-between p-4 shadow-lg top-0 z-99 fixed ">
       <div className="flex items-center gap-10">
@@ -40,8 +43,12 @@ const Navbar = () => {
         </div>
       </div>
       <div className="flex items-center gap-5 text-black font-semibold">
-        <Button label={"Sign In"} btnColor={"transparent"} />
-        <Button label={"Sign up"} btnColor={"black"} textColor="white" />
+        <Button action={()=>{
+          navigate("/signin")
+        }} label={"Sign In"} btnColor={"transparent"} />
+        <Button action={() => {
+          navigate("/signup")
+        }} label={"Sign up"} btnColor={"black"} textColor="white" />
       </div>
     </div>
   );

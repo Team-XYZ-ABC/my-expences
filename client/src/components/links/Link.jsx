@@ -1,10 +1,11 @@
 import React from 'react'
+import { Link as A }  from 'react-router-dom'
 
-const Link = ({label}) => {
+const Link = ({label, path}) => {
     return (
-        <p className='cursor-pointer select-none hover:underline text-[#1049BD] font-bold px-1.5 text-sm'>
+        <A to={path} className='cursor-pointer select-none hover:underline text-[#1049BD] font-bold px-1.5 text-sm'>
             {label}
-        </p>
+        </A>
     )
 }
 

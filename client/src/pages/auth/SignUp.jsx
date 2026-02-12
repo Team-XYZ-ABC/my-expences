@@ -17,9 +17,9 @@ const SignUp = () => {
   const [password, setPassword] = useState("");
 
   return (
-    <div className="w-full pt-20 min-h-screen flex  justify-between">
-      <div className="w-1/2 bg-blue-500 hidden lg:flex"></div>
-      <div className="w-full my-5 flex justify-center items-center lg:w-1/2 bg-white p-5">
+    <div className="flex w-full pt-20 min-h-screen">
+      <div className="w-[50%] bg-blue-300 hidden lg:flex"></div>
+      <div className=" w-full lg:w-[50%] flex justify-center px-5 items-center '">
         <FormLayout>
 
           <TitleDescription title={"Create Account"} description={"Track your expenses, stay organized, and manage your money better."} />
@@ -60,10 +60,8 @@ const SignUp = () => {
           <Button SIcon={FcGoogle} label={"Sign in with Google"} btnColor={"transparent"} />
           <div className="flex w-full justify-center">
             <Description description="Already have an account?" />
-            <Link label="Sign in" />
+            <Link path="/signin" label="Sign in" />
           </div>
-
-
         </FormLayout>
       </div>
 
