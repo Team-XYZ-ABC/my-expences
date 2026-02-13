@@ -16,5 +16,6 @@ export const ENV = {
   NODE_ENV: process.env.NODE_ENV || "development",
   JWT_SECRET: process.env.JWT_SECRET,
   JWT_EXPIRES_IN: process.env.JWT_EXPIRES_IN,
-  CLIENT_ORIGIN: [process.env.CLIENT_ORIGIN1, process.env.CLIENT_ORIGIN2, process.env.CLIENT_ORIGIN3]
+  CLIENT_ORIGIN2: process.env.CLIENT_ORIGIN2
+  // CLIENT_ORIGIN: [process.env.CLIENT_ORIGIN1, process.env.CLIENT_ORIGIN2, process.env.CLIENT_ORIGIN3]
 };
