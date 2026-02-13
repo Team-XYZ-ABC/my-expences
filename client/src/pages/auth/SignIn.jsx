@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Button from '@/components/buttons/Button'
 import Breaker from '@/components/Extras/Breaker';
 import Input from '@/components/inputs/Input';
@@ -25,11 +25,9 @@ const SignIn = () => {
                     <InputBox label={"Email Address"}>
                         <Input type={"text"} placeholder={"Email Address"}
                             value={email}
-                            onChange={
-                                (elem) => {
-                                    setEmail(elem.target.value)
-                                }
-                            } />
+                            onChange={(elem)=>{
+                                setEmail(elem.target.value)
+                            }}/>
                     </InputBox>
 
                     <InputBox label={"Password"}>
@@ -43,8 +41,8 @@ const SignIn = () => {
                         />
                     </InputBox>
 
-                    <div className='w-full flex justify-end px-1'><Link label={"Forget Password"} /></div>
-                    
+                    <div className='w-full flex justify-end px-1'><Link path="/forget-password">Forget Password</Link></div>
+
                     <Button label={"Sign In"} LIcon={FaArrowRight}
                         action={() => {
                             console.log(email)
@@ -55,10 +53,12 @@ const SignIn = () => {
                     <Breaker label={"ON CONTINUE WITH"} />
 
                     <Button SIcon={FcGoogle} label={"Sign In with Google"} btnColor='transparent' />
-                    
+
                     <div className='flex justify-center'>
-                        <Description description={"Don't have an Account?"} />
-                        <Link label={"Sign up"} />
+                        <Description>
+                            Don't have an Account?
+                        </Description>
+                        <Link path="/signup">Sign up</Link>
                     </div>
 
                 </FormLayout>
