@@ -1,13 +1,13 @@
 import express from "express";
-import cors from "cors";
+// import cors from "cors";
 import Route from "./routes/auth.route.js";
-import { corsOptions } from "./configs/cors.config.js";
+// import { corsOptions } from "./configs/cors.config.js";
 import userRoute from "./routes/user.route.js";
 const app = express();
 
 /* ---------- Global Middlewares ---------- */
 app.use(express.json()); 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 
 
 /* ---------- Routes ---------- */
