@@ -41,7 +41,7 @@ const SignIn = () => {
                         />
                     </InputBox>
 
-                    <div className='w-full flex justify-end px-1'><Link path="/forget-password" label={"Forget Password"} /></div>
+                    <div className='w-full flex justify-end px-1'><Link path="/forget-password">Forget Password</Link></div>
 
                     <Button label={"Sign In"} LIcon={FaArrowRight}
                         action={() => {
@@ -55,8 +55,10 @@ const SignIn = () => {
                     <Button SIcon={FcGoogle} label={"Sign In with Google"} btnColor='transparent' />
 
                     <div className='flex justify-center'>
-                        <Description description={"Don't have an Account?"} />
-                        <Link path="/signup" label={"Sign up"} />
+                        <Description>
+                            Don't have an Account?
+                        </Description>
+                        <Link path="/signup">Sign up</Link>
                     </div>
 
                 </FormLayout>

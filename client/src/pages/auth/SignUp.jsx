@@ -48,10 +48,10 @@ const SignUp = () => {
               type="checkbox"
               name=""
             />
-            <Description description={"I agree to the"} />
-            <Link label="Terms of Service" />
-            <Description description={"and"} />
-            <Link label="Privacy Policy." />
+            <Description>I agree to the </Description>
+            <Link path="/term-and-condition">Terms and Service</Link>
+            <Description>and</Description>
+            <Link path="/privacy-policy">Privacy Policy.</Link>
           </div>
 
           <Button label={"Creat Account"} textColor={"white"} />
@@ -59,8 +59,8 @@ const SignUp = () => {
           {/* <Breaker label={"OR CONTINUE WITH"} /> */}
           <Button SIcon={FcGoogle} label={"Sign in with Google"} btnColor={"transparent"} />
           <div className="flex w-full justify-center">
-            <Description description="Already have an account?" />
-            <Link path="/signin" label="Sign in" />
+            <Description>Already have an account?</Description>
+            <Link path="/signin">Sign in</Link>
           </div>
         </FormLayout>
       </div>
