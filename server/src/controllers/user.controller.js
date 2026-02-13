@@ -1,16 +1,16 @@
-import userProfile from '../models/user.model.js';
+
 import { getAllUsersData } from '../services/user.service.js';
 
-export const fetchAllUsers = async() =>{
+export const fetchAllUsers = async(req, res, next) =>{
     try {
         const users = await getAllUsersData();
 
         res.status(200).json({
-            message: "Success",
+            success: true,
             users: users.length,
             data: users
         })
     } catch (error) {
-        
+        next(error);
     }
 }

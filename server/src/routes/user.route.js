@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { fetchAllUsers } from "../controllers/user.controller";
+import { fetchAllUsers } from "../controllers/user.controller.js";
 
 const Route = Router();
 
