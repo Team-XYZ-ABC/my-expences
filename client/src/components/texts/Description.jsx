@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Description = ({description}) => {
+const Description = ({children}) => {
   return (
-      <p className='text-sm text-gray-500 text-start select-none'>{description}</p>
+    <p className='text-sm flex items-center gap-2.5 text-gray-500 text-start  flex-wrap select-none'>{children}</p>
   )
 }
 

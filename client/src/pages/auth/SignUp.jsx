@@ -17,9 +17,9 @@ const SignUp = () => {
   const [password, setPassword] = useState("");
 
   return (
-    <div className="w-full pt-20 min-h-screen flex  justify-between">
-      <div className="w-1/2 bg-blue-500 hidden lg:flex"></div>
-      <div className="w-full my-5 flex justify-center items-center lg:w-1/2 bg-white p-5">
+    <div className="flex w-full pt-20 min-h-screen">
+      <div className="w-[50%] bg-blue-300 hidden lg:flex"></div>
+      <div className=" w-full lg:w-[50%] flex justify-center px-5 items-center '">
         <FormLayout>
 
           <TitleDescription title={"Create Account"} description={"Track your expenses, stay organized, and manage your money better."} />
@@ -48,10 +48,10 @@ const SignUp = () => {
               type="checkbox"
               name=""
             />
-            <Description description={"I agree to the"} />
-            <Link label="Terms of Service" />
-            <Description description={"and"} />
-            <Link label="Privacy Policy." />
+            <Description>I agree to the </Description>
+            <Link path="/term-and-condition">Terms and Service</Link>
+            <Description>and</Description>
+            <Link path="/privacy-policy">Privacy Policy.</Link>
           </div>
 
           <Button label={"Creat Account"} textColor={"white"} />
@@ -59,11 +59,9 @@ const SignUp = () => {
           {/* <Breaker label={"OR CONTINUE WITH"} /> */}
           <Button SIcon={FcGoogle} label={"Sign in with Google"} btnColor={"transparent"} />
           <div className="flex w-full justify-center">
-            <Description description="Already have an account?" />
-            <Link label="Sign in" />
+            <Description>Already have an account?</Description>
+            <Link path="/signin">Sign in</Link>
           </div>
-
-
         </FormLayout>
       </div>
 
@@ -72,55 +70,3 @@ const SignUp = () => {
 };
 
 export default SignUp;
-
-
-
-
-{/* <div className="w-full lg:w-1/2 bg-white p-10">
-  <div className="flex flex-col gap-4 ">
-    <h1 className="text-5xl font-bold">Create your account</h1>
-    <Description
-      font="m"
-      description={
-        "Track your expenses, stay organized, and manage your money better."
-      }
-    />
-  </div>
-
-  <div className="flex lg:flex-row lg:gap-5 mt-5 flex-col">
-    <Button SIcon={FcGoogle} label={"Google"} btnColor={"transparent"} />
-    <Button SIcon={FaApple} label={"Apple"} btnColor={"transparent"} />
-  </div>
-
-  <Breaker label={"OR CONTINUE WITH"} />
-
-  <InputBox label={"Full Name"}>
-    <Input placeholder={"your name"} type={"text"} />
-  </InputBox>
-
-  <InputBox label={"Email Address"}>
-    <Input placeholder={"Enter your email"} type={"email"} />
-  </InputBox>
-
-  <InputBox label={"Password"}>
-    <Input placeholder={"********"} type={"password"} />
-  </InputBox>
-
-  <div className="my-10 flex items-center flex-wrap">
-    <input
-      className="h-6 w-6 mr-2.5 accent-blue-500"
-      type="checkbox"
-      name=""
-    />
-    <Description description={"I agree to the"} />
-    <Link label="Terms of Service" />
-    <Description description={"and"} />
-    <Link label="Privacy Policy." />
-  </div>
-
-  <Button label={"Creat Account"} textColor={"white"} />
-  <div className="flex w-full justify-center">
-    <Description description="Already have an account?" />
-    <Link label="Sign in" />
-  </div>
-</div> */}
