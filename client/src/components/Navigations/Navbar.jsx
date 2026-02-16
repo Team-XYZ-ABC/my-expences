@@ -58,9 +58,12 @@ const Navbar = ({isSideBarOpen , setIsSideBarOpen}) => {
         </div>
       </div>
       <div className="hidden sm:flex items-center gap-5 text-black font-semibold">
-        <Button label={"Sign In"} btnColor={"transparent"} />
-        <Button label={"Sign up"} btnColor={"black"} textColor="white" />
-
+        <Button action={()=>{
+          navigate("/signin")
+        }} label={"Sign In"} btnColor={"transparent"} />
+        <Button action={() => {
+          navigate("/signup")
+        }} label={"Sign up"} btnColor={"black"} textColor="white" />
       </div>
     </div>
   );
