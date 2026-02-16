@@ -2,14 +2,23 @@ import React from "react";
 import { MdOutlineAccountBalanceWallet } from "react-icons/md";
 import Button from "../buttons/Button";
 import { IoIosMenu } from "react-icons/io";
+import { TbLayoutSidebarRightExpand } from "react-icons/tb";
+
+import { TbLayoutSidebarLeftExpand } from "react-icons/tb";
 
 
-const Navbar = () => {
+
+const Navbar = ({isSideBarOpen , setIsSideBarOpen}) => {
+  // const [open , setOpen] = useState(true)
   return (
     <div className="w-full h-20 bg-white flex items-center justify-between p-4 shadow-lg top-0 z-99 fixed">
       <div className="flex w-full sm:w-fit items-center gap-10">
         <div className="flex items-center w-full sm:w-fit justify-between flex-row-reverse sm:flex-row">
-
+          {isSideBarOpen ? <TbLayoutSidebarRightExpand className="w-6 h-6 hidden lg:flex" onClick={()=> {
+            setIsSideBarOpen(false)
+          }}/> : <TbLayoutSidebarLeftExpand className="w-6 h-6 hidden lg:flex" onClick={() => {
+            setIsSideBarOpen(true)
+          }}/>}
           <IoIosMenu className="w-8 h-8 flex lg:hidden" />
           <div className="flex items-center ">
             <MdOutlineAccountBalanceWallet className="w-10 h-10 text-black p-2 rounded-md " />
