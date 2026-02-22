@@ -1,26 +1,20 @@
 import express from "express";
+// import cors from "cors";
 import Route from "./routes/auth.route.js";
-import {ENV} from "./configs/env.config.js"
-import cors from "cors";
+// import { corsOptions } from "./configs/cors.config.js";
+import userRoute from "./routes/user.route.js";
 const app = express();
 
 /* ---------- Global Middlewares ---------- */
-app.use(express.json()); // JSON body parser
-const corsOptions = {
-  origin: ENV.CLIENT_ORIGIN,
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  allowedHeaders: ["Content-Type", "Authorization"],
-  credentials: true,
-};
-
-app.use(cors(corsOptions));
+app.use(express.json()); 
+// app.use(cors(corsOptions));
 
 
 /* ---------- Routes ---------- */
 app.use('/api', Route);
+app.use('/api', userRoute);
 
-
-/* ---------- Health Check ---------- */
+/* ---------- Server Check ---------- */
 app.get("/", (req, res) => {
   res.status(200).json({
     success: true,

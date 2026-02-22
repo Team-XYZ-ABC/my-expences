@@ -4,7 +4,7 @@ import { ENV } from "./env.config.js";
 const connectDB = async () => {
     try {
         const conn = await mongoose.connect(ENV.MONGO_URI, {
-            autoIndex: ENV.NODE_ENV !== "production"
+            autoIndex: ENV.NODE_ENV !== "production" // Off autoIndex on production
         });
 
         console.log(
